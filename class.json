@@ -1,0 +1,22 @@
+{
+	"Name": "שם הכיתה",
+	"Room number": "מספר כיתת לימוד",
+	"Project": "מקצוע לימוד",
+	"Lecturer": {
+		"Name": "יגאל עידאן",
+		"Phone": "050-4433082",
+		"Email": "ygal.idan@gmail.com"
+	},
+	"Students": [
+			{
+			"Name": "???",
+			"Phone": "050-1234567",
+			"Email": "youremail@exemple.com"
+			},
+			{
+			"Name": "???",
+			"Phone": "050-1234567",
+			"Email": "youremail@exemple.com"
+			}
+	]
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="he">
+    <head>
+        <title>Project Git</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                text-align: center;
+                padding: 20px;
+                direction: rtl;
+            }
+            table {
+                width: 60%;
+                margin: auto;
+                border-collapse: collapse;
+                background: white;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            th, td {
+                padding: 12px;
+                border-bottom: 1px solid #ddd;
+                text-align: center;
+            }
+            thead tr:first-child th {
+            background: #4CAF50; /* שורה ראשונה - ירוק כהה */
+            color: white;
+            }
+            thead tr:nth-child(2) th {
+                background: #A5D6A7; /* שורה שנייה - ירוק בהיר */
+                color: black;
+            }
+            tr:hover {
+                background-color: #f1f1f1;
+            }
+            td {
+                color: #333;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>פרוייקט {{project}}</h1>
+        <p><b>שם הכיתה:</b> {{name}}, <b>מספר כיתה:</b> {{roomNumber}}</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>שם מלא</th>
+                    <th>מספר פלאפון</th>
+                    <th>עיר</th>
+                </tr>
+                <tr>
+                    <th>{{lecturer['Name']}}</th>
+                    <th>{{lecturer['Phone']}}</th>
+                    <th>{{lecturer['Email']}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in students %}
+                <tr>
+                    <td>{{student.Name}}</td>
+                    <td>{{student.Phone}}</td>
+                    <td>{{student.Email}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
